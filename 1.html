@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+ <html>
+<head>
+<title>MY PAGE</title>
+</head>
+
+<body>
+  <div class="firstpage">
+     <div class="h1" align="center">
+        Welcome to MY PAGE
+        <br>
+        <br>
+     </div>
+   <div  align="center" class="tabs">
+      <button id="1" onclick="fun1()"  >Resume</button>
+      <button id="2" onclick="fun2()" >Contact Us</button>
+   </div>
+ </div>
+  <div class="content" id="resume">
+    <h1>RESUME</h1>
+    <table id="home" >
+    <tr>
+       <th>PERSONAL DETAILS</th>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>Shyam Gautam</td>
+    </tr>
+    <tr>
+      <td>Father's Name</td>
+      <td>Ravi Shankar</td>
+    </tr>
+    <tr>
+      <td>Mother's Name</td>
+      <td>Lalita Devi</td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td>Gorakhpur,Uttar Pradesh</td>
+    </tr>
+    <tr>
+      <td>Nationality</td>
+      <td>Indian</td>
+    </tr>
+    <tr>
+      <td>DOB</td>
+      <td>20 June 1999</td>
+    </tr>
+    <tr>
+      <td>Contact No.</td>
+     <td>9664314517</td>
+    </tr>
+    <tr>
+      <td>Email-ID</td>
+      <td>gautam.2@iitj.ac.in</td>
+    </tr>
+    <tr>
+       <th>EDUCATIONAL QUALIFICATIONS</th>
+    </tr>
+    <tr>
+       <td>Class/Course/Other</td>
+       <td>School/Institution</td>
+       <td>Period</td>
+       <td>Performance/Result</td>
+    </tr>
+    <tr>
+      <td>Class 10</td>
+      <td>SBVM Maharajganj</td>
+      <td>2014-15</td>
+      <td>86.5%</td>
+    </tr>
+    <tr>
+      <td>Class 12</td>
+      <td>M.A.Inter College</td>
+      <td>2016-17</td>
+      <td>80.8 %</td>
+    </tr>
+    <tr>
+      <td>JEE Mains</td>
+      <td>N.A.</td>
+      <td>2017</td>
+      <td>AIR-14345</td>
+    </tr>
+    <tr>
+      <td>JEE Advanced</td>
+      <td>N.A.</td>
+      <td>2017</td>
+      <td> AIR-50000000</td>
+    </tr>
+    </table>
+ <div id="hobbies">
+ <h2>HOBBIES</h2>
+ <ul>
+ <li>Badminton</li>
+ <li>Watching and Playing Cricket</li>
+ <li>Tennis</li>
+<li>Study</li>
+ </ul> 
+</div>
+</div>
+<div class="content" id="contact">
+ <h1>CONTACT US</h1>
+ Name:
+<input type="text" id="NAME"  />
+<br>
+<br>
+ Phone Number:
+<input type="number" name="NAME"  />
+<br>
+<br>
+Comments:
+<br>
+<textarea name="comments" rows="4" col="80">
+</textarea>
+<br>
+<button class="submit" onclick="fun3()">Submit</button>
+</div>
+</body>
+<script>
+function fun1(){
+ var content1,i,content2;
+ content1=document.getElementsByClassName("content");
+ content2=document.getElementsByClassName("h1");
+for(i=0;i<content1.length;i++){
+ content1[i].style.display="none";
+}
+for(i=0;i<content2.length;i++){
+ content2[i].style.display="none";
+}
+ document.getElementById("resume").style.display="block";
+}
+function fun2(){
+ var content1,i,content2;
+ content1=document.getElementsByClassName("content");
+ content2=document.getElementsByClassName("h1");
+ for(i=0;i<content1.length;i++){
+   content1[i].style.display="none";
+}
+ for(i=0;i<content2.length;i++){
+   content2[i].style.display="none";
+}
+ document.getElementById("contact").style.display="block";
+}
+function fun3(){
+  var content1,content2;
+  content1=document.getElementById("NAME");
+   content2=document.getElementById("comments");
+   if(content1.length==0 || content2==" "){
+   alert("Fill the details completely");
+    }
+   else{
+  alert("Thank You for your Submission");}
+}
+</script>
+<style>
+body{font-family: Arial;}
+.tabs{
+ margin:auto;
+ display:block;
+ padding: 10px 20px;
+ font-size:20px;
+ border: 2px;
+}
+button {
+ margin-top:40px;
+ color: black;
+ font-size: 16px;
+ background-color: green;
+ text-align: center;
+ height:35px;
+ width:20%;
+}
+#home td, #home th{
+ border: 1px solid black;
+ padding: 8px;
+}
+#home tr{background-color:white;
+}
+#home th{
+ background-color:green;
+ text-align: center;
+ color:white;
+}
+input{
+display:inline;
+ margin-top: auto;
+ height:20px;
+ width: 20%;
+}
+#NAME{margin-left:65px;}
+textarea{
+ height:60px;
+ width:50%;
+}
+.content{
+ display:none;
+}
+.h1{
+ font-size:40px;
+ width:100%;
+ font-family:algerian;
+}
+body{
+  background-image: url("10.jpg");
+  background-size:cover;
+}
+.submit{
+ height:25px;
+ width:10%;
+}
+#hobbies{
+font-size:25px;
+}
+</style>
+</html>
